@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programming Language Inventors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Programming Language Inventors</h1>
+
+    <label>Select a Programming Language Inventor:</label>
+    <select id="inventorList" onchange="showInventor()">
+        <option value="">-- Select Inventor --</option>
+        <option value="gosling">James Gosling (Java)</option>
+        <option value="rossum">Guido van Rossum (Python)</option>
+        <option value="ritchie">Dennis Ritchie (C)</option>
+        <option value="stroustrup">Bjarne Stroustrup (C++)</option>
+        <option value="eich">Brendan Eich (JavaScript)</option>
+        <option value="lerdorf">Rasmus Lerdorf (PHP)</option>
+        <option value="matsumoto">Yukihiro Matsumoto (Ruby)</option>
+        <option value="hejlsberg">Anders Hejlsberg (C#)</option>
+        <option value="hopper">Grace Hopper (COBOL)</option>
+        <option value="mccarthy">John McCarthy (Lisp)</option>
+    </select>
+
+    <div class="container">
+        <img id="inventorImage" class="circle-image" src="" alt="">
+        <div id="infoBox" class="info-box">Select an inventor to view details</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
