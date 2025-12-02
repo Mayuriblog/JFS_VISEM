@@ -18,6 +18,10 @@ you can change the existing files in local repo
 3. git commit -m "message"
 4. git push origin main
 
+-----------------------------------------------
+If you want to retrieve the remote repo to local pc
+
+git clone <remote-url>
 
 
 
