@@ -47,7 +47,10 @@ function showInventor() {
     if (inventor === "") {
         document.getElementById("inventorImage").src = "";
         document.getElementById("infoBox").innerText = "Select an inventor to view details";
-    } else {
+    } else if (inventor === "gosling") {
+            img.classList.remove("circle");
+            img.classList.add("square");
+        } else{
         document.getElementById("inventorImage").src = data[inventor].img;
         document.getElementById("infoBox").innerText = data[inventor].info;
     }
