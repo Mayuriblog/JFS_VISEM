@@ -1,0 +1,33 @@
+Develop employee webapp through maven
+
+1.create a database like skillnext_db
+2.create a table like employee(id auto increment primary key, name, email,salary)
+3.open cmd and type 
+mvn archetype:generate -DgroupId=com.skillnext1 -DartifactId=employee-webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+4.we can add some folders manually in project folder
+employee-webapp
+		pom.xml
+		src
+			main
+				java ----> (user created folder)
+					com
+						skillnext1
+									Employee.java
+									EmployeeDAO.java
+									Employeeservlet.java
+				resources
+				webapp 
+					WEB-INF
+						web.xml
+					index.jsp
+					sucess.jsp(user defined file)
+
+5.open cmd and type 
+cd employee-webapp
+6.type mvn dependency:copy-dependencies
+7.mvn clean package (it generates .war file)
+8.copy .war file which was in target folder and then paste it in webapps folder in apache tomcat folder
+9.open bin folder in apache tomcat and click on startup.bat file 
+10.open browser and type localhost:8080/employee-webapp
+11.enter the employee details and click on save then verify it in employee table which was in mysql workbench
+12.if you want to close tomcat server then click on shutdown.bat file in bin folder.
