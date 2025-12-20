@@ -1,0 +1,39 @@
+Create hiberante-employee Project through Maven
+
+1. Prerequisites (must be installed)
+	java -version
+	mvn -version
+	mysql --version
+
+2.Create Database & Table (MySQL Workbench)
+  Ex:   CREATE DATABASE skillnext2_db;
+		USE skillnext2_db;
+
+		CREATE TABLE employee (
+			id INT AUTO_INCREMENT PRIMARY KEY,
+			name VARCHAR(100),
+			email VARCHAR(100),
+			salary DOUBLE
+		);
+3.Create Maven Project (CMD)
+
+mvn archetype:generate 
+-DgroupId=com.skillnext2
+ -DartifactId=hibernate-employee 
+ -DarchetypeArtifactId=maven-archetype-quickstart 
+ -DinteractiveMode=false
+
+4. cd hibernate-employee
+5. Add External libraries in pom.xml 
+	(like hiberante core,JPA API,Mysql Connector)
+6. Create java files in skillnext2 package 
+	Employee.java
+	HibernateUtil.java
+	App.java
+7. Create a resources folder in main, 
+	In that you create one hiberante.cfg.xml 
+8. In cmd prompt type ---> mvn dependency:copy-dependencies
+9. mvn clean package ( jar file)
+10. mvn exec:java -Dexec.mainClass=com.skillnext2.App 
+
+
