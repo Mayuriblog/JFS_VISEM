@@ -25,15 +25,17 @@ mvn archetype:generate
 
 4. cd hibernate-employee
 5. Add External libraries in pom.xml 
-	(like hiberante core,JPA API,Mysql Connector)
+	(like hibernate core,JPA API,Mysql Connector)
 6. Create java files in skillnext2 package 
 	Employee.java
 	HibernateUtil.java
 	App.java
 7. Create a resources folder in main, 
-	In that you create one hiberante.cfg.xml 
-8. In cmd prompt type ---> mvn dependency:copy-dependencies
+	In that you create one hibernate.cfg.xml 
+8. In cmd prompt type --->
+ mvn dependency:copy-dependencies
 9. mvn clean package ( jar file)
-10. mvn exec:java -Dexec.mainClass=com.skillnext2.App 
+10. mvn exec:java 
+-Dexec.mainClass=com.skillnext2.App 
 
 
