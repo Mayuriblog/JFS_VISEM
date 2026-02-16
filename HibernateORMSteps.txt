@@ -1,0 +1,53 @@
+Develop hibernate application contains one-many and 
+many-one relationship
+-----------------------------------------------------------
+Step 1: Create Maven Project in Eclipse
+
+Open Eclipse and Go to File → New → Maven Project 
+and Select Create a simple project and Enter
+Group Id: com.example
+Artifact Id: HibernateOneToMany
+Click Finish
+
+Step 2: Add Dependencies (pom.xml)
+Open pom.xml and add: hibernate orm,mysql,jpa
+Right click project → Maven → Update Project 
+(check all dependencies are downloaded or not)
+
+Step 3: Create Package Structure
+Inside src/main/java create:
+com.example.entity
+com.example.util
+com.example.main
+
+Step 4: In entity package you can Create Parent Entity 
+(Department.java) and Child Entity (Employee.java)
+
+Step 5: In util package you can Create Hibernate Utility 
+Class (HibernateUtil.java)
+
+Step 6: In util package you can Create Main Class (MainApp.java)
+
+Step 7: Create Hibernate Configuration file in the following
+ folder src/main/resources/hibernate.cfg.xml
+(check properly database name,username,password)
+
+Step 8: Create Database in Mysql Workbench
+create database hibernate_db;
+use hibernate_db;
+
+Step 9: Run the Project
+open eclipse IDE 
+Go to Project -> Right Click → Run As → Java Application
+
+Hibernate will automatically create:
+department table
+employee table
+foreign key
+(Check it once in the workbench)
+
+
+
+
+
+
